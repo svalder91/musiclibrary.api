@@ -8,27 +8,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		LICENSE = LICENSE
+		musiclibrary.api.sln.DotSettings = musiclibrary.api.sln.DotSettings
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D095B5E-2E8C-4709-87CD-439D1E11047E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{172847BC-CB09-4D29-8EAD-2A1BD9257AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contracts", "contracts\contracts.csproj", "{6ECE558B-E9A6-4F72-A206-81286F7C8434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "contracts", "contracts\contracts.csproj", "{6ECE558B-E9A6-4F72-A206-81286F7C8434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data.access", "data.access\data.access.csproj", "{90F8D2D5-A3BD-46EC-8886-BB476AF12677}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data.access", "data.access\data.access.csproj", "{90F8D2D5-A3BD-46EC-8886-BB476AF12677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "core\core.csproj", "{B3ABF877-C9AC-499A-B0EA-B9629C6B8F8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core", "core\core.csproj", "{B3ABF877-C9AC-499A-B0EA-B9629C6B8F8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "business.logic", "business.logic\business.logic.csproj", "{93D4738A-DFAB-4539-9F92-6EA541700B35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "business.logic", "business.logic\business.logic.csproj", "{93D4738A-DFAB-4539-9F92-6EA541700B35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "host", "host\host.csproj", "{C561E856-8BB8-407B-ADD0-F0F098E84141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "host", "host\host.csproj", "{C561E856-8BB8-407B-ADD0-F0F098E84141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core.test.unit", "core.test.unit\core.test.unit.csproj", "{2DAD1C6A-88E1-484C-B734-1112D08400C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core.test.unit", "core.test.unit\core.test.unit.csproj", "{2DAD1C6A-88E1-484C-B734-1112D08400C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data.access.test.unit", "data.access.test.unit\data.access.test.unit.csproj", "{AE8F8AFC-6B99-4E22-8B4D-0EA3B750FEE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data.access.test.unit", "data.access.test.unit\data.access.test.unit.csproj", "{AE8F8AFC-6B99-4E22-8B4D-0EA3B750FEE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "business.logic.test.unit", "business.logic.test.unit\business.logic.test.unit.csproj", "{8537462C-831F-44CE-80C4-BDA647EA53AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "business.logic.test.unit", "business.logic.test.unit\business.logic.test.unit.csproj", "{8537462C-831F-44CE-80C4-BDA647EA53AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
