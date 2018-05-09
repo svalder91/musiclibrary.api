@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Demo.MusicLibrary.Api.Contracts</AssemblyName>
+    <RootNamespace>Demo.MusicLibrary.Api.Contracts</RootNamespace>
+  </PropertyGroup>
+
+</Project>
