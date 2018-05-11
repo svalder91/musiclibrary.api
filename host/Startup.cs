@@ -1,6 +1,4 @@
 ﻿using System;
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using Demo.MusicLibrary.Api.Host.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,13 +9,8 @@ namespace Demo.MusicLibrary.Api.Host
 {
     public class Startup
     {
+        public Startup(IHostingEnvironment environment) { Configuration = CreateConfiguration(environment); }
 
-        public Startup(IHostingEnvironment environment)
-        {
-            Configuration = CreateConfiguration(environment);
-        }
-
-        public IContainer Container { get; set; }
         public IConfigurationRoot Configuration { get; set; }
 
         private static IConfigurationRoot CreateConfiguration(IHostingEnvironment environment)
@@ -32,8 +25,8 @@ namespace Demo.MusicLibrary.Api.Host
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            Container = services.RegisterAutofac();
-            return new AutofacServiceProvider(Container);
+            services.RegisterAutofac(out var provider);
+            return provider;
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
