@@ -27,7 +27,7 @@ namespace Demo.MusicLibrary.Api.Host
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.RegisterAutofac(out var provider);
+            services.AddAutofac(out var provider);
             return provider;
         }
 

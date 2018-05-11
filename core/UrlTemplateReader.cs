@@ -13,6 +13,7 @@ namespace Demo.MusicLibrary.Api.Core
         private readonly IActionDescriptorCollectionProvider _collectionProvider;
         private static IEnumerable<Link> _templates;
 
+        // ReSharper disable once UnusedMember.Global
         public UrlTemplateReader(IActionDescriptorCollectionProvider collectionProvider)
         {
             _collectionProvider = collectionProvider;

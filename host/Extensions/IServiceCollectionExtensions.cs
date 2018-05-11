@@ -6,7 +6,7 @@ namespace Demo.MusicLibrary.Api.Host.Extensions
 {
     public static class IServiceCollectionExtensions
     {
-        public static void RegisterAutofac(this IServiceCollection services, out AutofacServiceProvider provider)
+        public static void AddAutofac(this IServiceCollection services, out AutofacServiceProvider provider)
         {
             var builder = new ContainerBuilder();
             builder.RegisterModule(new DataAccess.Autofac.MainModule());
