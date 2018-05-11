@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Demo.MusicLibrary.Api.Contracts.Model
+namespace Demo.MusicLibrary.Api.Contracts.Models
 {
     public class Link
     {

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Demo.MusicLibrary.Api.Contracts.Services;
 
 namespace Demo.MusicLibrary.Api.DataAccess.Autofac
 {
@@ -6,6 +7,7 @@ namespace Demo.MusicLibrary.Api.DataAccess.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<ArtistHandler>().As<IArtistHandler>();
             base.Load(builder);
         }
     }

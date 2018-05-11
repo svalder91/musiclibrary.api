@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Demo.MusicLibrary.Api.Contracts.Model;
+using Demo.MusicLibrary.Api.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
@@ -16,13 +16,19 @@ namespace Demo.MusicLibrary.Api.Core.Controller
             _collectionProvider = collectionProvider;
         }
 
-        [Route(Constants.Routes.Home.Prefix,Name = Constants.Relations.Home.GetUrlTemplates)]
+        [Route(Constants.Routes.Home.Prefix, Name = Constants.Relations.Home.GetUrlTemplates)]
         public ActionResult<IEnumerable<Link>> Get()
         {
             IList<Link> result = new List<Link>();
-           AddRoute(ref result, Constants.Relations.Home.GetUrlTemplates);
+            AddRoute(ref result, Constants.Relations.Home.GetUrlTemplates);
+            AddRoute(ref result, Constants.Relations.Artists.GetArtists);
+            AddRoute(ref result, Constants.Relations.Artists.GetArtistById);
+            AddRoute(ref result, Constants.Relations.Artists.AddArtist);
+            AddRoute(ref result, Constants.Relations.Artists.UpdateArtist);
+            AddRoute(ref result, Constants.Relations.Artists.RemoveArtist);
             return Ok(result);
         }
+
 
 
         private void AddRoute(ref IList<Link> target, string relation)

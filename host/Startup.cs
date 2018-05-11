@@ -9,6 +9,7 @@ namespace Demo.MusicLibrary.Api.Host
 {
     public class Startup
     {
+        // ReSharper disable once UnusedMember.Global
         public Startup(IHostingEnvironment environment) { Configuration = CreateConfiguration(environment); }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -22,6 +23,7 @@ namespace Demo.MusicLibrary.Api.Host
                 .Build();
         }
 
+        // ReSharper disable once UnusedMember.Global
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
@@ -29,6 +31,7 @@ namespace Demo.MusicLibrary.Api.Host
             return provider;
         }
 
+        // ReSharper disable once UnusedMember.Global
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
