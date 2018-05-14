@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -12,8 +12,10 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.0-rc1-final" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-rc1-final" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.0-rc1-final" />
+    <PackageReference Include="System.Memory" Version="4.5.0-rc1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,5 +24,9 @@
     <ProjectReference Include="..\core\core.csproj" />
     <ProjectReference Include="..\data.access\data.access.csproj" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+  </PropertyGroup>
 
 </Project>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace hosting
+namespace Demo.MusicLibrary.Api.Hosting
 {
     public class Startup
     {
@@ -36,8 +36,7 @@ namespace hosting
         // ReSharper disable once UnusedMember.Global
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-                app.UseDeveloperExceptionPage();
+            if (env.IsDevelopment()) app.UseDeveloperExceptionPage();
             app.UseMvc();
         }
     }

@@ -1,9 +1,8 @@
 ﻿using System.IO;
-using Demo.MusicLibrary.Api.Host;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace hosting
+namespace Demo.MusicLibrary.Api.Hosting
 {
     public class Program
     {
@@ -15,7 +14,6 @@ namespace hosting
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseKestrel()
                 .UseIISIntegration()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
