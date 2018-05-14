@@ -1,8 +1,9 @@
 ﻿using System.IO;
+using Demo.MusicLibrary.Api.Host;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Demo.MusicLibrary.Api.Host
+namespace hosting
 {
     public class Program
     {

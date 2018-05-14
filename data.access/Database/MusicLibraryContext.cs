@@ -7,7 +7,7 @@ namespace Demo.MusicLibrary.Api.DataAccess.Database
     internal sealed class MusicLibraryContext : DbContext
     {
 
-        public MusicLibraryContext() 
+        public MusicLibraryContext(DbContextOptions options) : base(options) 
         {
             Database.EnsureCreated();
         }
