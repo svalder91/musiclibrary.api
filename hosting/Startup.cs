@@ -1,6 +1,6 @@
 ﻿using System;
 using Demo.MusicLibrary.Api.DataAccess.Extensions;
-using Demo.MusicLibrary.Api.Host.Extensions;
+using Demo.MusicLibrary.Api.Hosting.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -28,8 +28,8 @@ namespace Demo.MusicLibrary.Api.Hosting
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddEntityFramework(Configuration.GetConnectionString("Default"));
-            services.AddAutofac(out var provider);
+            services.AddDatabase(Configuration.GetConnectionString("Default"));
+            services.AddAutofac(Configuration, out var provider);
             return provider;
         }
 

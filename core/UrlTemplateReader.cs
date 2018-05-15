@@ -47,7 +47,7 @@ namespace Demo.MusicLibrary.Api.Core
             target.Add(new Link
             {
                 Relation = item.AttributeRouteInfo.Name,
-                Method = item.RouteValues["action"].ToUpper(),
+                Method = item.RouteValues["action"].ToLower(),
                 Hyperreference = item.AttributeRouteInfo.Template
             });
         }

@@ -6,5 +6,8 @@ namespace Demo.MusicLibrary.Api.DataAccess.Database.Handler
 {
     internal class DbArtistHandler : DbEntityHandler<DbArtist>, IDbArtistHandler
     {
+        public DbArtistHandler(MusicLibraryContext context) : base(context)
+        {
+        }
     }
 }

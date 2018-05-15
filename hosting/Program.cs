@@ -1,5 +1,4 @@
-﻿using System.IO;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Demo.MusicLibrary.Api.Hosting
@@ -15,7 +14,6 @@ namespace Demo.MusicLibrary.Api.Hosting
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseIISIntegration()
-                .UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
     }
 }

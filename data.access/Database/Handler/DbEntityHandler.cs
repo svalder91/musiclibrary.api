@@ -9,50 +9,43 @@ namespace Demo.MusicLibrary.Api.DataAccess.Database.Handler
 {
     internal class DbEntityHandler<T> : IDbEntityHandler<T> where T : DbBaseEntity
     {
+        protected MusicLibraryContext Context { get; }
+
+        public DbEntityHandler(MusicLibraryContext context)
+        {
+            Context = context;
+        }
+
         public async Task<T> CreateAsync(T entity, MusicLibraryContext context = null)
         {
-            using (var provider = new DataProvider(context))
-            {
-                await provider.Context.Set<T>().AddAsync(entity, CancellationToken.None).ConfigureAwait(false);
-                await provider.Context.SaveChangesAsync().ConfigureAwait(false);
-                return entity;
-            }
+            await Context.Set<T>().AddAsync(entity, CancellationToken.None).ConfigureAwait(false);
+            await Context.SaveChangesAsync().ConfigureAwait(false);
+            return entity;
         }
 
         public async Task<IEnumerable<T>> ReadAsync(MusicLibraryContext context = null)
         {
-            using (var provider = new DataProvider(context))
-            {
-                return await provider.Context.Set<T>().ToListAsync().ConfigureAwait(false);
-            }
+            return await Context.Set<T>().ToListAsync().ConfigureAwait(false);
         }
 
         public async Task<T> ReadAsync(string id, MusicLibraryContext context = null)
         {
-            using (var provider = new DataProvider(context))
-            {
-                return await provider.Context.Set<T>().FirstOrDefaultAsync(_ => _.Id == id).ConfigureAwait(false);
-            }
+            return await Context.Set<T>().FirstOrDefaultAsync(_ => _.Id == id).ConfigureAwait(false);
         }
 
         public async Task<T> UpdateAsync(T entity, MusicLibraryContext context = null)
         {
-            using (var provider = new DataProvider(context))
-            {
-                provider.Context.Set<T>().Update(entity);
-                await provider.Context.SaveChangesAsync().ConfigureAwait(false);
-                return entity;
-            }
+
+            Context.Set<T>().Update(entity);
+            await Context.SaveChangesAsync().ConfigureAwait(false);
+            return entity;
         }
 
         public async Task<T> DeleteAsync(T entity, MusicLibraryContext context = null)
         {
-            using (var provider = new DataProvider(context))
-            {
-                provider.Context.Set<T>().Remove(entity);
-                await provider.Context.SaveChangesAsync().ConfigureAwait(false);
-                return entity;
-            }
+            Context.Set<T>().Remove(entity);
+            await Context.SaveChangesAsync().ConfigureAwait(false);
+            return entity;
         }
     }
 }
