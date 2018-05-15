@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using NLog.Web;
 
 namespace Demo.MusicLibrary.Api.Hosting
 {
@@ -14,6 +15,7 @@ namespace Demo.MusicLibrary.Api.Hosting
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseIISIntegration()
+                .UseNLog()
                 .Build();
     }
 }
